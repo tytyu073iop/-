@@ -3,6 +3,7 @@
 \usepackage{listings}
 \usepackage[a4paper, top=2cm, bottom=2cm, left=2cm, right=2cm]{geometry}
 \usepackage{hyperref}
+\usepackage{amsmath}
 
 \title{Типы уравнений}
 \author{Бирюк Илья Александрович}
@@ -13,5 +14,59 @@
 \tableofcontents
 \newpage
 \section{Метод вариации произвольных постоянных (Правило Лагранжа)}
+Дано: $D^2x-2Dx+x=e^t/(t^2+1)$
+\begin{enumerate}
+    \item Решаем $\lambda$
 
+    $\lambda^2-2\lambda+1=0$
+    
+    $\lambda_1=1,k=2$
+    \item Выводим $X_{oo}$
+    
+    $X_{oo}=(C_0+C_{1}t)e^{t}$
+
+    Идеал: $X_{oo}=\sum_{i=1}^{n}(C_0+C_1t+\dots+C_{k_{i}-1}t^{k_i-1})e^{\lambda_i}$
+
+    \item Составляем систему уравнений
+    
+    Идеал: 
+    \[
+\left\{
+\begin{aligned}
+    \psi_0 D u_0 + \dots + \psi_{n-1} D u_{n-1} &= 0, \\
+    D \psi_0 D u_0 + \dots + D \psi_{n-1} D u_{n-1} &= 0, \\
+    & \dots \\
+    D^{n-2} \psi_0 D u_0 + \dots + D^{n-2} \psi_{n-1} D u_{n-1} &= 0, \\
+    D^{n-1} \psi_0 D u_0 + \dots + D^{n-1} \psi_{n-1} D u_{n-1} &= f.
+\end{aligned}
+\right.
+\]
+
+Для того чтобы получить какие-либо $\psi$ Надо взять $X_{oo}$ и подставить некоторые, базисные $C$
+\[
+\left\{
+\begin{aligned}
+    \psi_0 = [C_0 = 1, C_1 = 0] = (1+0*t)e^{t} =  e^{t} \\
+    \psi_1 = [C_0 = 0, C_1 = 1] = (0+1*t)e^{t} = te^{t}
+\end{aligned}
+\right.
+\]
+    \item Решаем систему
+    
+\[
+\left\{
+\begin{aligned}
+    e^{t} D u_0 + te^{t} D u_{1} &= 0, \\
+    e^{t} D u_0 + (e^{t}+te^{t}) D u_{1} &= \frac{e^{t}}{t^2+1}, \\
+\end{aligned}
+\right.
+\]    
+
+    \item Подставляем
+    $$x_{\text{чн}}(t) = \sum_{k=0}^{n-1} u_k(t) \psi_k(t)$$
+    \item Складываем
+    $x=x_{\text{оо}}+x_{\text{чн}}$
+\end{enumerate}
+\newpage
+\section{Правило Коши}
 \end{document}
