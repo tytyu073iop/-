@@ -1,0 +1,2 @@
+\babel@toc {russian}{}\relax 
+\contentsline {section}{\numberline {1}Метод вариации произвольных постоянных (Правило Лагранжа)}{3}{section.1}%
