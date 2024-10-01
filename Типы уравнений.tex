@@ -69,4 +69,57 @@
 \end{enumerate}
 \newpage
 \section{Правило Коши}
+Дано:
+
+$D^2x+2Dx+x = e^{2t}$
+
+$x|_{t=1}=1, Dx|_{t=1}=5$
+\begin{enumerate}
+    \item Решаем $\lambda$
+    
+    $\lambda^2+2\lambda+1=0$
+
+    $(\lambda+1)^2=0$
+
+    $\lambda=-1,k=2$
+    \item Выводим $X_{oo}$
+    
+    $X_{oo}=(C_0+C_{1}t)e^{-t}$
+
+    $D_tX_{oo}=C_1e^{-t}-(C_0+C_{1}t)e^{-t}$
+    \item Решаем систему
+    
+\[
+\left\{
+\begin{aligned}
+    X_{oo}(1)=1 \\
+    DX_{oo}(1)=5 \\
+\end{aligned}
+\right.
+\]  
+\[
+\left\{
+\begin{aligned}
+    \frac{(C_0+C_{1})}{e}=1 \\
+    \frac{C_0}{e}=5 \\
+\end{aligned}
+\right.
+\]  
+\[
+\left\{
+\begin{aligned}
+    C_1=-6e \\
+    C_0=5e \\
+\end{aligned}
+\right.
+\] 
+    \item Находим $\varphi$
+    
+    Идеал: 
+
+    $\varphi(t)=(-5e+6et)e^{-t}$
+
+    \item Решаем $x_{\text{чн}}=\int_{0}^{t}(-5e+6e(t-\tau))e^{-(t-\tau)}d\tau$
+    \item $x=x_{oo}+x_{\text{чн}}$
+\end{enumerate}
 \end{document}
