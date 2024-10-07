@@ -1,9 +1,11 @@
-\documentclass{article}
+\documentclass[a4paper, 12pt]{article}
 \usepackage[english, russian]{babel}
 \usepackage{listings}
-\usepackage[a4paper, top=2cm, bottom=2cm, left=2cm, right=2cm]{geometry}
+\usepackage[top=2cm, bottom=2cm, left=2cm, right=2cm, bindingoffset=0pt]{geometry}
 \usepackage{hyperref}
-\usepackage{amsmath}
+\usepackage{amsmath,amsfonts,amssymb,amsthm,mathtools}
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
 
 \title{Типы уравнений}
 \author{Бирюк Илья Александрович}
@@ -13,6 +15,56 @@
 \newpage
 \tableofcontents
 \newpage
+\section{Проверка}
+Дано: $x=f(t)$ 
+Пример: $x=t/2$
+
+$D^2x+2Dx+1=3t$, $D^2x = x''$
+\begin{enumerate}
+    \item Задаём $I$, по $x$. Так как в примере $t$ сверху, то $I=(-\infty, +\infty)$
+    \item Подставляем $x$ в уравнение.
+    $0+1+1=3$
+\end{enumerate}
+\section{Просто решение уравнения c нулём на конце}
+Дано: $D^4x-7D^3x+17D^2x-17Dx+6=0$
+\begin{enumerate}
+    \item Перепишем $D^nx=\lambda^n$
+    
+    $\lambda^4-7\lambda^3+17\lambda^2-17\lambda+6=0$
+    \item Находим корни(решаем)
+    \begin{enumerate}
+        \item $\lambda_1=1,k=2$, $k$ --- Степень корня
+        \item $\lambda_2=2,k=1$
+        \item $\lambda_1=3,k=1$
+    \end{enumerate}
+    \item Перепишем уравнение в $L_n$ виде
+    
+    $(D-1D^0)^2(D-2D^0)(D-3D^0)x=0$
+    \item Записываем $x_i$
+    
+    $x_1=(C_0+C_1t)e^{1t}$
+
+    $x_2=C_2e^{2t}$
+
+    $x_3=C_3e^{3t}$
+    \item Сумируем $x_i$
+\end{enumerate}
+\section{Проверить является ли эти $\phi$ базисом}
+\begin{enumerate}
+    \item Строим вронскиан ($w(t)$)
+    
+    $
+    \begin{bmatrix}
+        \varphi_1 & \varphi_2 & \cdots & \varphi_N \\
+        D\varphi_1 & D\varphi_2 & \cdots & D\varphi_N \\
+        D^2\varphi_1 & D^2\varphi_2 & \cdots & D^2\varphi_N \\
+        D^3\varphi_1 & D^3\varphi_2 & \cdots & D^3\varphi_N \\
+        \vdots & \vdots & \ddots & \vdots \\
+    \end{bmatrix}
+    $
+
+    \item Проверяем его на базис, беря любое удобное $t$ (обычно равное $0$)
+\end{enumerate}
 \section{Метод вариации произвольных постоянных (Правило Лагранжа)}
 Дано: $D^2x-2Dx+x=e^t/(t^2+1)$
 \begin{enumerate}

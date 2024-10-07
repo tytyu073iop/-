@@ -1,3 +1,6 @@
 \babel@toc {russian}{}\relax 
-\contentsline {section}{\numberline {1}Метод вариации произвольных постоянных (Правило Лагранжа)}{3}{section.1}%
-\contentsline {section}{\numberline {2}Правило Коши}{4}{section.2}%
+\contentsline {section}{\numberline {1}Проверка}{3}{section.1}%
+\contentsline {section}{\numberline {2}Просто решение уравнения c нулём на конце}{3}{section.2}%
+\contentsline {section}{\numberline {3}Проверить является ли эти $\phi $ базисом}{3}{section.3}%
+\contentsline {section}{\numberline {4}Метод вариации произвольных постоянных (Правило Лагранжа)}{4}{section.4}%
+\contentsline {section}{\numberline {5}Правило Коши}{5}{section.5}%
