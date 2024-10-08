@@ -3,4 +3,5 @@
 \contentsline {section}{\numberline {2}Просто решение уравнения c нулём на конце}{3}{section.2}%
 \contentsline {section}{\numberline {3}Проверить является ли эти $\phi $ базисом}{3}{section.3}%
 \contentsline {section}{\numberline {4}Метод вариации произвольных постоянных (Правило Лагранжа)}{4}{section.4}%
-\contentsline {section}{\numberline {5}Правило Коши}{5}{section.5}%
+\contentsline {section}{\numberline {5}Правило Коши}{4}{section.5}%
+\contentsline {section}{\numberline {6}Правило Эйлера}{5}{section.6}%

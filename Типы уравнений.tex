@@ -119,7 +119,8 @@ $D^2x+2Dx+1=3t$, $D^2x = x''$
     \item Складываем
     $x=x_{\text{оо}}+x_{\text{чн}}$
 \end{enumerate}
-\newpage
+
+Если даны условия коши, то их подставляем в конце.
 \section{Правило Коши}
 Дано:
 
@@ -173,5 +174,61 @@ $x|_{t=1}=1, Dx|_{t=1}=5$
 
     \item Решаем $x_{\text{чн}}=\int_{0}^{t}(-5e+6e(t-\tau))e^{-(t-\tau)}d\tau$
     \item $x=x_{oo}+x_{\text{чн}}$
+\end{enumerate}
+\section{Правило Эйлера}
+$te^4$ - квазиполином
+
+$D^2x-2Dx+x=6te^t$
+
+\begin{enumerate}
+    \item Находим контрольные числа(перед т). И м для них(порядок(степень перед е) многочлена) если косинус, то левее.
+    
+    $\gamma_1=1, m_1=1$
+
+    При синусах и косинусах
+
+    $(\sin t+t\cos t)e^{0t}\rightarrow\gamma=(\gamma\pm\beta i)$
+
+    $1e^{-t}\cos2t\rightarrow\gamma=(\gamma\pm\beta i)=-1\pm2i, m=0$ (sin тоже)
+    \item находим $\lambda$ и $X_{oo}(t)$
+    
+    $\lambda^2-2\lambda+1=0$
+
+    $\lambda=1,k=2$
+
+    $X_{\text{oo}_i}(t)=(C_0+C_1t)e^{t}$
+    \item Для каждого контрольного числа смотрим совпадает ли оно с лямбдой, если да r = k, иначе r = 0(ни с одним)
+    
+    да
+    \item $X_{\text{чн}_i}(t)=t^r(\text{многочлен m степени})e^{\gamma it}$
+    
+    $X_{\text{чн}_i}(t)=t^2(C_0+C_1t)e^{t}$
+
+    Для комплексных
+
+    $\gamma=-1\pm2i\rightarrow X_{cn}=t^r(C_0\sin2t+C_1\cos2t)e^{-t}$
+
+    \item $X_{\text{чн}}(t)=\sum X_{cn_i}(t)$ - \textbf{общий вид} (содержит константы)
+    
+    $X_{\text{чн}_i}(t)=t^2(C_0+C_1t)e^{t}$
+    \item Находим производные уравнения ($DX_{cn}, D^2X{xn}\dots$) и решаем как многочлен.
+    
+    $DX_{\text{чн}}=2C_0te^t+C_0t^2e^t+3C_1t^2e^t+C_1t^3e^t$
+
+    $D^2X_{\text{чн}}=2C_0e^t+4C_0te^t+C_0t^2e^t+6C_1te^t+3C_1t^2e^t+3C_1t^2e^t+C_1t^3e^t$
+
+    $2C_0e^t+4C_0te^t+C_0t^2e^t+6C_1te^t+3C_1t^2e^t+3C_1t^2e^t+C_1t^3e^t-(2C_0te^t+C_0t^2e^t+3C_1t^2e^t+C_1t^3e^t)+C_0t^2e^t+C_1t^3e^t=6te^t$
+
+    $C_1-2C_1+C_1=0$
+
+    $C_0+3C_1+3C_1-2C_0-6C_1+C_0=0$
+
+    $2C_0+2C_0+6C_1+3C_1-4C_0=6$
+
+    $C_1=1, C_0=0$
+    \item подставляем $C_i$ в $X_{\text{чн}}$
+    
+    $X_{\text{чн}}=t^3e^t$
+    \item сумируем $x=x_{oo}+x_{\text{чн}}$
 \end{enumerate}
 \end{document}
